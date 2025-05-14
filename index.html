@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор струмів короткого замикання</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Калькулятор струмів КЗ</h1>
+        <p>Розрахунок струмів та перевірка стійкості для різних режимів підстанцій</p>
+    </header>
+    <main>
+        <section class="form-container">
+            <form id="calc-form">
+                <div class="form-group">
+                    <label for="voltage">Напруга (кВ):</label>
+                    <input type="number" id="voltage" name="voltage" placeholder="10" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="power">Потужність (кВА):</label>
+                    <input type="number" id="power" name="power" placeholder="50" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mode">Виберіть режим:</label>
+                    <select id="mode" name="mode" required>
+                        <option value="normal">Нормальний</option>
+                        <option value="minimum">Мінімальний</option>
+                        <option value="emergency">Аварійний</option>
+                    </select>
+                </div>
+
+                <button type="submit">Розрахувати</button>
+            </form>
+        </section>
+
+        <section id="results" class="results-container"></section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
